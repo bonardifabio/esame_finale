@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
 
 const utentiSchema=mongoose.Schema({
-    IDUtente:mongoose.Types.ObjectId,
+    //IDUtente:mongoose.Types.ObjectId,
     nome:String, //required indica un campo obbligatorio, senza sarebbe nome:String;
     cognome:String,
     nascita:{
