@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const controllers = require("../controllers/prenotazioni.controllers.js");
 
-//router.get("/", controllers.getBookings);
+router.get("/", controllers.getBookings);
 
 router.post("/", controllers.addBooking);
 

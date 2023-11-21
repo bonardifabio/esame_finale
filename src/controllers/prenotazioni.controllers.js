@@ -3,9 +3,13 @@ const corsiModel = require("../models/corsi.models.js");
 const palestreModel = require("../models/palestre.models.js");
 
 module.exports = {
-    /*getBookings: async function(req, res) {
-     res.send(await prenotazioniModel.getBookings());
-    }, */
+    getBookings: async function(req, res) {
+        try {
+            res.send(await prenotazioniModel.getBookings());
+        } catch (error) {
+            res.status(500).send(error);
+        }
+    }, 
 
     addBooking: async function (req, res) {
         try {
