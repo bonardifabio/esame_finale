@@ -41,7 +41,9 @@ module.exports = {
             const prenotazione = await prenotazioniModel.getBooking(req.params.IDPrenotazione);
             const corso = await corsiModel.getCourse(prenotazione.IDCorso);
             const oggi= new Date();
-            var Difference_In_Time = oggi.getTime() - corso.data.getTime(); 
+            var Difference_In_Time =corso.data.getTime() - oggi.getTime(); 
+            console.log(corso.data.getTime())
+            console.log(oggi.getTime())
             const daysDiff =Difference_In_Time / (24 * 60 * 60 * 60);
             console.log(daysDiff)
         if(daysDiff>1){
